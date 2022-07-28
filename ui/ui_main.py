@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'v2wGzvLT.ui'
+## Form generated from reading UI file 'v2cuZeIm.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -13,16 +13,16 @@ from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
     QRadialGradient)
-from PyQt5 import QtWidgets
 from PySide2.QtWidgets import *
-import sys
 
+import BdB_rc
+import logo_rc
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(677, 409)
+        Form.resize(677, 446)
         self.widget = QWidget(Form)
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(-50, 0, 671, 401))
@@ -43,23 +43,16 @@ class Ui_Form(object):
         self.label_2.setTextFormat(Qt.RichText)
         self.cedulaText = QLineEdit(self.widget)
         self.cedulaText.setObjectName(u"cedulaText")
-        self.cedulaText.setGeometry(QRect(110, 100, 211, 20))
+        self.cedulaText.setGeometry(QRect(130, 100, 181, 20))
         font1 = QFont()
         font1.setFamily(u"Roboto")
         self.cedulaText.setFont(font1)
         self.cedulaText.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 196, 196, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "border-radius: 5px")
         self.cedulaText.setAlignment(Qt.AlignCenter)
-        self.loadCSVButton = QPushButton(self.widget)
-        self.loadCSVButton.setObjectName(u"loadCSVButton")
-        self.loadCSVButton.setGeometry(QRect(340, 100, 91, 23))
-        self.loadCSVButton.setFont(font)
-        self.loadCSVButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 212, 68, 255), stop:1 rgba(212, 255, 156, 255));\n"
-"border-radius: 10px\n"
-"")
         self.consultarButton = QPushButton(self.widget)
         self.consultarButton.setObjectName(u"consultarButton")
-        self.consultarButton.setGeometry(QRect(150, 150, 91, 23))
+        self.consultarButton.setGeometry(QRect(340, 100, 91, 23))
         self.consultarButton.setFont(font)
         self.consultarButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 227, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "border-radius: 10px\n"
@@ -77,21 +70,29 @@ class Ui_Form(object):
         font2.setPointSize(10)
         self.label_5.setFont(font2)
         self.label_5.setTextFormat(Qt.AutoText)
-        self.finishButton = QPushButton(self.widget)
-        self.finishButton.setObjectName(u"finishButton")
-        self.finishButton.setGeometry(QRect(260, 150, 91, 23))
-        self.finishButton.setFont(font)
-        self.finishButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 162, 255, 255), stop:1 rgba(122, 198, 255, 255));\n"
-"border-radius: 10px\n"
-"")
+        self.textEdit = QTextEdit(self.widget)
+        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setEnabled(True)
+        self.textEdit.setGeometry(QRect(110, 150, 361, 161))
+        self.textEdit.setFrameShape(QFrame.WinPanel)
+        self.label_6 = QLabel(self.widget)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(530, 60, 101, 101))
+        self.label_6.setStyleSheet(u"")
+        self.label_6.setPixmap(QPixmap(u":/prefijoNuevo/BdB.png"))
         self.label_3.raise_()
         self.label.raise_()
         self.label_2.raise_()
         self.cedulaText.raise_()
-        self.loadCSVButton.raise_()
         self.consultarButton.raise_()
         self.label_5.raise_()
-        self.finishButton.raise_()
+        self.textEdit.raise_()
+        self.label_6.raise_()
+        self.label_4 = QLabel(Form)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(280, 370, 351, 61))
+        self.label_4.setStyleSheet(u"")
+        self.label_4.setPixmap(QPixmap(u":/prefijoNuevo/aval.png"))
 
         self.retranslateUi(Form)
 
@@ -99,22 +100,14 @@ class Ui_Form(object):
     # setupUi
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Banco de  Bogot\u00e1 - RNEC Scraping", None))
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Banco de  Bogot\u00e1 - RUES Scraping", None))
         self.label.setText("")
-        self.label_2.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Consulta de defunci\u00f3n Registraduria</span></p></body></html>", None))
-        self.cedulaText.setText(QCoreApplication.translate("Form", u"Ingrese el n\u00famero de cedula...", None))
-        self.loadCSVButton.setText(QCoreApplication.translate("Form", u"Abrir CSV", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; color:#ffffff;\">Consulta de RUES</span></p></body></html>", None))
+        self.cedulaText.setText(QCoreApplication.translate("Form", u"Ingrese el n\u00famero de NIT", None))
         self.consultarButton.setText(QCoreApplication.translate("Form", u"Consultar", None))
         self.label_3.setText("")
-        self.label_5.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Aplicativo para la </span></p><p align=\"center\"><span style=\" font-size:10pt;\">extracci\u00f3n de datos</span></p><p align=\"center\"><span style=\" font-size:10pt;\">de RNEC. </span></p><p align=\"center\"><span style=\" font-size:10pt;\">Desarrollada en</span></p><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Python.</span></p></body></html>", None))
-        self.finishButton.setText(QCoreApplication.translate("Form", u"Ver resultados", None))
+        self.label_5.setText(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\">Aplicativo para la </p><p align=\"center\">extracci\u00f3n de datos</p><p align=\"center\">de RUES. </p><p align=\"center\">Desarrollada en</p><p align=\"center\"><span style=\" font-weight:600;\">Python.</span></p></body></html>", None))
+        self.label_6.setText("")
+        self.label_4.setText("")
     # retranslateUi
 
-if __name__ == "__main__":
-        app=QtWidgets.QApplication(sys.argv)
-        Form = QtWidgets.QWidget()
-        ui = Ui_Form()
-        ui.setupUi(Form)
-        Form.show()
-        sys.exit(app.exec_())
-        
