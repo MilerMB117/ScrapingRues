@@ -43,5 +43,5 @@ data = nit
 resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
 print (resultado.text)
 
-#Pandas DataFrame (in maintenance)
+#closeBrowser
 
