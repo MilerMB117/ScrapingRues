@@ -16,3 +16,7 @@ Usando Pip
         1. Abrir cmd y escribir: designer y dar enter.
         2. Se abrira el entorno de  PyQT5 Designer.
         3. Abrir el archivo V2.ui de la carpeta ui.
+
+### RECOMENDACIONES:
+
+        Usar la libreria auto-selenium(https://pypi.org/project/auto-selenium/) para actualizar de forma automatica el webdriver de forma universal para cualquier navegador.
