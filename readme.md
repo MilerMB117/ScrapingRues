@@ -1,5 +1,4 @@
-# Scraping RUES
-V.10
+# Scraping RUES V.10
 Python Version: 3.10.5 (https://www.python.org/downloads/)
 # Dev
 Miler Menjure
