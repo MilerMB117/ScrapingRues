@@ -1,6 +1,6 @@
 import sys
-import BdB_rc
-import logo_rc
+import BdB_rc #Import Convert logo file
+import logo_rc #Import Convert logo file
 import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from PyQt5 import QtCore, QtGui, QtWidgets #works for pyqt5
+from PyQt5 import QtCore, QtGui, QtWidgets 
 from PySide2.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox,QLineEdit,QLabel,QWidget,QPushButton
