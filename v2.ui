@@ -155,22 +155,6 @@ border-radius: 10px;</string>
      <enum>Qt::AutoText</enum>
     </property>
    </widget>
-   <widget class="QTextEdit" name="info">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>140</y>
-      <width>331</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::WinPanel</enum>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
@@ -209,15 +193,46 @@ border-radius: 10px;</string>
      <pixmap resource="icon/BdB.qrc">:/prefijoNuevo/aval.png</pixmap>
     </property>
    </widget>
+   <widget class="QLineEdit" name="info">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>140</y>
+      <width>321</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(196, 196, 196, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius: 5px</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>340</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;v 1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
    <zorder>label_3</zorder>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>nitText</zorder>
    <zorder>consultarButton</zorder>
    <zorder>label_5</zorder>
-   <zorder>info</zorder>
    <zorder>label_6</zorder>
    <zorder>label_4</zorder>
+   <zorder>info</zorder>
+   <zorder>label_7</zorder>
   </widget>
  </widget>
  <resources>

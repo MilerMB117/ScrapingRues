@@ -28,7 +28,7 @@ class UI(QMainWindow):
         #define widgets
         self.nitText = self.findChild(QLineEdit, 'nitText')
         self.consultarButton = self.findChild(QPushButton, 'consultarButton')
-        self.info= self.findChild(QTextEdit, 'info')
+        self.info= self.findChild(QLineEdit, 'info')
         
         #Do something(?)
         self.consultarButton.clicked.connect(self.click)
@@ -63,7 +63,7 @@ class UI(QMainWindow):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/button'))).click()
         #extractData
         resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
-        self.info.setText(resultado)
+        self.info.setText(resultado.text)
         
         #closeBrowser  
         driver.quit()
