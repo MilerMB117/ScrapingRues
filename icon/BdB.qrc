@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="prefijoNuevo">
+    <file>aval.png</file>
+  </qresource>
+</RCC>
