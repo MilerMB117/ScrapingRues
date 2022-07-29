@@ -10,6 +10,7 @@ Usando Pip
       pip install PyQt5
       pip install PyQt5Designer
       pip install chromedriver-autoinstaller
+      pip install rc
 
 ### PASO 2: Ejecutar Designer desde cmd para Modificar UI.
 
