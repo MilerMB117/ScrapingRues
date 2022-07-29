@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-
+from PyQt5 import QtCore, QtGui, QtWidgets #works for pyqt5
 from PySide2.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox,QLineEdit,QLabel,QWidget,QPushButton
@@ -18,6 +18,9 @@ from selenium.webdriver.chrome.options import Options
 class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
+        #set Icon
+        self.setWindowIcon(QtGui.QIcon('icon.png'))
+
         
         #lOAD UI FILE
         uic.loadUi("v2.ui", self)
