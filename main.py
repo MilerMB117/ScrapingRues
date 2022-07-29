@@ -20,11 +20,8 @@ class UI(QMainWindow):
         super(UI, self).__init__()
         #set Icon
         self.setWindowIcon(QtGui.QIcon('icon.png'))
-
-        
         #lOAD UI FILE
         uic.loadUi("v2.ui", self)
-        
         #define widgets
         self.nitText = self.findChild(QLineEdit, 'nitText')
         self.consultarButton = self.findChild(QPushButton, 'consultarButton')
@@ -49,6 +46,7 @@ class UI(QMainWindow):
         # define 'driver' variable
         #driver = webdriver.Chrome(executable_path = path, options=chrome_options)
         driver = webdriver.Chrome(executable_path = path)
+        driver.maximize_window()
         driver.get(website)
         nit = self.nitText.text()
         #searchData
@@ -56,14 +54,15 @@ class UI(QMainWindow):
         #clickonConsultar
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnConsultaNIT"]'))).click()
         #button spanning
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr/td[1]'))).click()
+        #WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr/td[1]'))).click()
         #button Info
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr[2]/td/ul/li[4]/span[2]/a'))).click()
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr/td[7]/a'))).click()
         #button representante legal
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/button'))).click()
         #extractData
-        resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
+        resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/div')))
         self.info.setText(resultado.text)
+        print (resultado.text) 
         
         #closeBrowser  
         driver.quit()
