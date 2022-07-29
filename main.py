@@ -1,11 +1,14 @@
 import sys
+import BdB_rc
+import logo_rc
+import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-import chromedriver_autoinstaller
+
 from PySide2.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox,QLineEdit,QLabel,QWidget,QPushButton
@@ -29,6 +32,7 @@ class UI(QMainWindow):
         
         #Show the app
         self.show()
+
         
     def click(self):
         #Start Scraping
@@ -48,14 +52,18 @@ class UI(QMainWindow):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtNIT"]'))).send_keys(nit)
         #clickonConsultar
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnConsultaNIT"]'))).click()
+        #button spanning
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr/td[1]'))).click()
         #button Info
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main[1]/div/div[6]/div/div/div/div/table/tbody/tr/td[7]/a'))).click()
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="rmTable2"]/tbody/tr[2]/td/ul/li[4]/span[2]/a'))).click()
         #button representante legal
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/button'))).click()
         #extractData
         resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
-        self.info.setText(resultado.text)
+        self.info.setText(resultado)
+        
         #closeBrowser  
+        driver.quit()
         
 #initialize the app
 app = QApplication(sys.argv)

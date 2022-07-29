@@ -42,6 +42,5 @@ WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/bod
 data = nit
 resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
 print (resultado.text)
-
-#closeBrowser
+driver.quit()
 

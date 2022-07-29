@@ -20,3 +20,7 @@ Usando Pip
 ### RECOMENDACIONES:
 
         Usar la libreria auto-selenium (https://pypi.org/project/auto-selenium/) para actualizar de forma automatica el webdriver de forma universal para cualquier navegador.
+
+## Si el app no carga imagenes:
+
+        La solucion es convertir los qrc a py : https://stackoverflow.com/questions/50627220/loadui-loads-everything-but-no-images-in-pyqt
