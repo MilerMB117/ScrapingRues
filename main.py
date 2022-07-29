@@ -48,7 +48,9 @@ class UI(QMainWindow):
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtNIT"]'))).send_keys(nit)
         #clickonConsultar
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="btnConsultaNIT"]'))).click()
+        #button Info
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main[1]/div/div[6]/div/div/div/div/table/tbody/tr/td[7]/a'))).click()
+        #button representante legal
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/button'))).click()
         #extractData
         resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="txtFacultades"]')))
