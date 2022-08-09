@@ -60,7 +60,7 @@ class UI(QMainWindow):
         #button representante legal
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/button'))).click()
         #extractData
-        resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div/div')))
+        resultado = WebDriverWait(driver, 25).until(EC.element_to_be_clickable((By.ID, 'txtFacultades')))
         self.info.setText(resultado.text)
         print (resultado.text) 
         
